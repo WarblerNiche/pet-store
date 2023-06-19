@@ -28,7 +28,7 @@ public class PetStoreController {
 		return petStoreService.savePetStore(petStoreData);
 	}
 	
-	@PutMapping("/pet_store_id")
+	@PutMapping("/pet_store/{petStoreId}")
 	public PetStoreData updatePetStore(@PathVariable Long petStoreId, @RequestBody PetStoreData petStoreData) {
 		petStoreData.setPet_store_id(petStoreId);
 		log.info("Updating store information {}.", petStoreData);

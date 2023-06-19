@@ -20,7 +20,7 @@ public class GlobalErrorHandler {
 	public Map<String, String> handleNoSuchElementException(NoSuchElementException ex) {
 		log.error("Pet Store with ID=", ex.toString());
 		Map<String, String> result = new HashMap<>();
-		result.put("message", ex.toString());
+		result.put("Error", ex.toString());
 		return result;
 	}
 
